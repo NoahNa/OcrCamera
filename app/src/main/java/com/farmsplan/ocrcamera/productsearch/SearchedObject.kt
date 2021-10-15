@@ -19,9 +19,10 @@ package com.farmsplan.ocrcamera.productsearch
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Rect
-import com.google.firebase.ml.md.R
-import com.google.firebase.ml.md.kotlin.Utils
-import com.google.firebase.ml.md.kotlin.objectdetection.DetectedObject
+import com.farmsplan.ocrcamera.R
+import com.farmsplan.ocrcamera.objectdetection.DetectedObject
+import com.farmsplan.ocrcamera.settings.Utils
+
 
 /** Hosts the detected object info and its search result.  */
 class SearchedObject(resources: Resources, private val detectedObject: DetectedObject, val productList: List<Product>) {

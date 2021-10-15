@@ -22,9 +22,9 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.FrameLayout
+import com.farmsplan.ocrcamera.R
+import com.farmsplan.ocrcamera.settings.Utils
 import com.google.android.gms.common.images.Size
-import com.google.firebase.ml.md.R
-import com.google.firebase.ml.md.kotlin.Utils
 import java.io.IOException
 
 /** Preview the camera image in the screen.  */

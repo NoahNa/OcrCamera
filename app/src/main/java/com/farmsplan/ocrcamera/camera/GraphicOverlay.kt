@@ -22,7 +22,7 @@ import android.graphics.Rect
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
-import com.google.firebase.ml.md.kotlin.Utils
+import com.farmsplan.ocrcamera.settings.Utils
 import java.util.ArrayList
 
 

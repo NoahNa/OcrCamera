@@ -25,11 +25,11 @@ import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.WindowManager
-import com.google.android.gms.common.images.Size
-import com.google.firebase.ml.md.R
-import com.google.firebase.ml.md.kotlin.Utils
-import com.google.firebase.ml.md.kotlin.settings.PreferenceUtils
-import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
+import com.farmsplan.ocrcamera.R
+import com.farmsplan.ocrcamera.settings.CameraSizePair
+import com.farmsplan.ocrcamera.settings.PreferenceUtils
+import com.farmsplan.ocrcamera.settings.Size
+import com.farmsplan.ocrcamera.settings.Utils
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.util.IdentityHashMap
@@ -50,7 +50,6 @@ import kotlin.math.ceil
 class CameraSource(private val graphicOverlay: GraphicOverlay) {
 
     private var camera: Camera? = null
-    @FirebaseVisionImageMetadata.Rotation
     private var rotation: Int = 0
 
     /** Returns the preview size that is currently in use by the underlying camera.  */

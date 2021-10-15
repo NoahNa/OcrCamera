@@ -10,9 +10,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.farmsplan.ocrcamera.barcodedetection.BarcodeField
 import com.farmsplan.ocrcamera.barcodedetection.BarcodeProcessor
-import com.farmsplan.ocrcamera.barcodedetection.BarcodeResultFragment
 import com.farmsplan.ocrcamera.camera.CameraSource
 import com.farmsplan.ocrcamera.camera.CameraSourcePreview
 import com.farmsplan.ocrcamera.camera.GraphicOverlay
@@ -21,7 +19,6 @@ import com.farmsplan.ocrcamera.camera.WorkflowModel.WorkflowState
 import com.google.common.base.Objects
 import com.google.android.material.chip.Chip
 import java.io.IOException
-import java.util.ArrayList
 
 class MainActivity : AppCompatActivity(), OnClickListener {
     private var cameraSource: CameraSource? = null
@@ -74,7 +71,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onPostResume() {
         super.onPostResume()
-        BarcodeResultFragment.dismiss(supportFragmentManager)
     }
 
     override fun onPause() {
@@ -177,12 +173,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             }
         })
 
-        workflowModel?.detectedBarcode?.observe(this, Observer { barcode ->
-            if (barcode != null) {
-                val barcodeFieldList = ArrayList<BarcodeField>()
-                barcodeFieldList.add(BarcodeField("Raw Value", barcode.rawValue ?: ""))
-                BarcodeResultFragment.show(supportFragmentManager, barcodeFieldList)
-            }
+        workflowModel?.detectedBarcode?.observe(this, Observer {
+
         })
     }
 

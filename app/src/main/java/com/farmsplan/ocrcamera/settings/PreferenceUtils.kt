@@ -20,11 +20,10 @@ import android.content.Context
 import android.graphics.RectF
 import android.preference.PreferenceManager
 import androidx.annotation.StringRes
+import com.farmsplan.ocrcamera.R
+import com.farmsplan.ocrcamera.camera.GraphicOverlay
 import com.google.android.gms.common.images.Size
-import com.google.firebase.ml.md.R
-import com.google.firebase.ml.md.kotlin.camera.CameraSizePair
-import com.google.firebase.ml.md.kotlin.camera.GraphicOverlay
-import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode
+
 
 /** Utility class to retrieve shared preferences.  */
 object PreferenceUtils {
